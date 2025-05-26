@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "event_based_pipeleine",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/mygen2container/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/b1d763c5-7bfe-4ba8-86a2-72d09b67865b/resourceGroups/mynewresourcegroupaccount/providers/Microsoft.Storage/storageAccounts/reethikastoragegen2",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
